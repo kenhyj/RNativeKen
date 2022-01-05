@@ -1,19 +1,18 @@
 // var storedUser = localStorage.getItem("aeUser")
 
-const INITIAL_STATE = {
-  username: storedUser  ? JSON.parse(storedUser)["emailAddress"]: "",
-  password: "",
-  loggedIn: storedUser  ? true : false,
-  uid: storedUser ? JSON.parse(storedUser)["applicationUserId"] : -1,
-};
-
 // const INITIAL_STATE = {
-//   username: "",
+//   username: storedUser  ? JSON.parse(storedUser)["emailAddress"]: "",
 //   password: "",
-//   loggedIn: false,
-//   admin: false ,
-//   uid: -1,
+//   loggedIn: storedUser  ? true : false,
+//   uid: storedUser ? JSON.parse(storedUser)["applicationUserId"] : -1,
 // };
+
+const INITIAL_STATE = {
+  username: "",
+  password: "",
+  loggedIn: false,
+  uid: -1,
+};
 
 const loginReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {

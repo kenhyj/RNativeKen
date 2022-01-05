@@ -4,16 +4,23 @@ import React, {useState} from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import reducers from "./redux";
+import { createStore } from 'redux';
+import { Provider as StoreProvider } from 'react-redux'
+
+
 import Login from "./pages/Login";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>The First Page of the React Native</Text>
-      <Text>Let's start with a Home or Login Page</Text> 
-      <Login/>
-      <StatusBar style="auto" />
-    </View>
+    <StoreProvider store={createStore(reducers)}>
+      <View style={styles.container}>
+        <Text>The First Page of the React Native</Text>
+        <Text>Let's start with a Home or Login Page</Text> 
+        <Login/>
+        <StatusBar style="auto" />
+      </View>
+    </StoreProvider>
   );
 }
 

@@ -8,3 +8,5 @@ import loginReducer from "./reducers/login-reducer";
 export default combineReducers({
   loginReducer: loginReducer,
 });
+
+// https://www.crowdbotics.com/blog/use-redux-hooks-in-react-native-app
