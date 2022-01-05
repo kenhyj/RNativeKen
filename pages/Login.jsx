@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import React, {useState} from "react";
 
 export default function Login() {
@@ -10,6 +10,7 @@ export default function Login() {
     <View style={styles.container}>
       <TextInput editable placeholder='Username'/>
       <TextInput editable placeholder='Password'/>
+      <Button></Button>
       <StatusBar style="auto" />
     </View>
   );
