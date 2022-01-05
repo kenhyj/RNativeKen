@@ -10,7 +10,9 @@ you are free to use phone emulators, be aware that
 CPU and RAM usages are extremely high for these emulators. 
 
 ## system requirements
-
+Expo Go installed on mobile device
+    IOS- https://apps.apple.com/ca/app/expo-go/id982107779
+    Android- https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_CA&gl=US
 
 ## Running Dev
 
@@ -19,6 +21,12 @@ cd kenrnative00
 npm install
 npm start
 ``` 
+
+## icons
+https://www.npmjs.com/package/react-native-vector-icons
+https://oblador.github.io/react-native-vector-icons/
+
+
 
 ### presentability for big audience
 https://github.com/Genymobile/scrcpy
