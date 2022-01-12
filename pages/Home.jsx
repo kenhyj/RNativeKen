@@ -3,9 +3,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 import React, {useState} from "react";
 
 
-export default function Home() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+export default function Home({navigation}) {
 
   return (
     <View style={styles.container}>

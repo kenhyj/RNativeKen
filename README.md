@@ -9,7 +9,16 @@ If Mobile Phone is not readily available,
 you are free to use phone emulators, be aware that 
 CPU and RAM usages are extremely high for these emulators. 
 
+### phone emulators
+IOS - Xcode 
+Android - Android Studio
+
 ## system requirements
+node --version
+    v16.13.0
+npm --version
+    8.1.0
+
 Expo Go installed on mobile device
     IOS- https://apps.apple.com/ca/app/expo-go/id982107779
     Android- https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_CA&gl=US
@@ -26,7 +35,11 @@ npm start
 https://www.npmjs.com/package/react-native-vector-icons
 https://oblador.github.io/react-native-vector-icons/
 
+## redux
 
+## navigation
+https://wix.github.io/react-native-navigation/docs/basic-navigation
+https://reactnavigation.org/docs/hello-react-navigation
 
 ### presentability for big audience
 https://github.com/Genymobile/scrcpy

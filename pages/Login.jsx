@@ -3,13 +3,13 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import React, {useState} from "react";
 import {Feather as FeatherIcon, MaterialIcons} from 'react-native-vector-icons';
 
-export default function Login() {
+export default function Login({navigation}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   return (
-    <View>
-      <Text>Login Page</Text> 
+    <View style={styles.container}>
+      {/* <Text>Login Page</Text>  */}
       <View>
         <FeatherIcon name="user" size={30}/>
         <TextInput editable placeholder='Username' value={username} onChange={setUsername}/>
@@ -23,3 +23,12 @@ export default function Login() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    // justifyContent: 'center',
+  },
+});
