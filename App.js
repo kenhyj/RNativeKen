@@ -20,24 +20,16 @@ import Home from './pages/Home';
 // https://reactnavigation.org/docs/drawer-based-navigation
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <StoreProvider store={createStore(reducers)}>
       <NavigationContainer>
-        {/* <Stack.Navigator initialRouteName='Login'>
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Home" comp
-          onent={Home} />
-        </Stack.Navigator> */}
-
-        <Drawer.Navigator initialRouteName='Login'>
-          <Drawer.Screen name="Login" component={Login} />
-          <Drawer.Screen name="Home" component={Home} />
-        </Drawer.Navigator>
+        <DrawerNavigatorBar />
       </NavigationContainer>
       <View>
-        <Text>React Native</Text>
+        <Text>kenhyj React Native</Text>
         {/* <NavigatorBar></NavigatorBar> */}
         <StatusBar style="auto" />
       </View>
@@ -45,12 +37,30 @@ export default function App() {
   );
 }
 
-const NavigatorBar = () => {
+const StackNavigatorBar = () => {
   return (
-    <View>
-      <Button title="Home" />
-      <Button title="Login" />
-    </View>
+    <Stack.Navigator initialRouteName='Login'>
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
+  )
+}
+
+const DrawerNavigatorBar = () => {
+  return (
+    <Drawer.Navigator initialRouteName='Login'>
+      <Drawer.Screen name="Login" component={Login} />
+      <Drawer.Screen name="Home" component={Home} />
+    </Drawer.Navigator>
+  )
+}
+
+const BottomTabNavigatorBar = () => {
+  return (
+    <Tab.Navigator initialRouteName='Login'>
+      <Tab.Screen name="Login" component={Login} />
+      <Tab.Screen name="Home" component={Home} />
+    </Tab.Navigator>
   )
 }
 
